@@ -1,0 +1,24 @@
+.darkToggle {
+  background-color: var(--color-grey-5);
+  border-radius: 3.125rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.313rem;
+  position: relative;
+  height: 1.625rem;
+  width: 3.75rem;
+}
+
+.darkToggle>img {
+  height: 1.625rem;
+  width: 3.125rem;
+}
+
+.darkToggleHide {
+  background: var(--color-black);
+  width: 1.875rem;
+  border-radius: 3.125rem;
+}
+

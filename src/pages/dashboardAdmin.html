@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/buttons.css">
+    <link rel="stylesheet" href="../styles/darkMode.css">
+    <link rel="stylesheet" href="../styles/modal.css">
+    <link rel="stylesheet" href="../styles/inputs.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="icon" href="https://kenzie.com.br/favicon.jpeg">
+    <title>CompanyOrganization - Administrador</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>CompanyOrganization</h1>
+            <div class="buttonsHeader">
+                <div class="darkToggle">
+                    <img class="darkToggleHide darkToggleSun" src="../assets/sunny_FILL0_wght400_GRAD0_opsz48.svg"
+                        alt="Imagem da lua">
+                    <img class="darkToggleMoon" src="../assets/bedtime_FILL0_wght400_GRAD0_opsz48.svg"
+                        alt="Imagem do sol">
+                </div>
+                <ul>
+                    <li class="buttonsGrey"><a href="">Setores/Usuários</a></li>
+                    <li class="buttonsGrey"><a href="./company.html">Empresas</a></li>
+                    <li class="buttonsGrey"><a href="./departments.html">Departamentos</a>
+                    </li>
+                    <li class="buttonsGrey"><a id="logout">Sair</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="container dashboard">
+        <div id="divHead">
+            <h2>Setores</h2>
+            <ul id="sectors"></ul>
+        </div>
+        <div id="divMain">
+            <div id="users">
+                <section class="companiesDashbord">
+                    <h2>Todos os Usuários</h2>
+                    <ul class="ulUser"></ul>
+                </section>
+                <section class="companiesDashbord">
+                    <h2>Usuários sem departamento</h2>
+                    <ul class="ulUserNoDepartment"></ul>
+                </section>
+            </div>
+            <div id="usersOrganization">
+                <div id="create">
+                    <h2>Cadastrar funcionário</h2>
+                    <form>
+                        <select class="input" name="sector" id="renderUser">
+                            <option value="">Selecione um usuário</option>
+                        </select>
+                        <select class="input" name="sector" id="renderUserSelect">
+                            <option value="">Selecione um departamento</option>
+                        </select>
+                        <button type="submit" class="buttonInput" id="buttonUser">Contratar</button>
+                    </form>
+                </div>
+                <div id="edit">
+                    <h2>Atualizar informações</h2>
+                    <form>
+                        <select class="input" name="editUser" id="editUser">
+                            <option value="">Escolha o funcionário</option>
+                        </select>
+                        <input class="input" type="text" name="editModel" placeholder="Modelo de trabalho"
+                            id="editModel" required>
+                        <input class="input" type="text" name="professionalLevel" id="professionalLevel"
+                            placeholder="Nível do profissional" required>
+                        <button type="submit" class="buttonInput" id="buttonModel">Editar</button>
+                    </form>
+                </div>
+                <div id="delete">
+                    <h2>Demitir funcionário</h2>
+                    <form>
+                        <select class="input" name="sectorEdit" id="deleteUser">
+                            <option value="">Escolha o funcionário</option>
+                        </select>
+                        <button type="submit" class="buttonInput" id="buttonDeleteUser">Demitir</button>
+                    </form>
+                </div>
+                <div id="delete">
+                    <h2>Deletar funcionário</h2>
+                    <form>
+                        <select class="input" name="sectorEdit" id="deleteUserPage">
+                            <option value="">Escolha o funcionário</option>
+                        </select>
+                        <button type="submit" class="buttonInput" id="buttonDeleteUserPage">Deletar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="../js/services/dashboardAdmin.js"></script>
+    <script type="module" src="../js/services/logout.js"></script>
+    <script type="module" src="../js/dashboard.js"></script>
+    <script type="module" src="../js/models/toast.js"></script>
+    <script type="module" src="../js/models/api.js"></script>
+</body>
+
+</html>

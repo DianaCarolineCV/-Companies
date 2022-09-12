@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/buttons.css">
+    <link rel="stylesheet" href="../styles/darkMode.css">
+    <link rel="stylesheet" href="../styles/inputs.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="icon" href="https://kenzie.com.br/favicon.jpeg">
+    <title>CompanyOrganization - Cadastro</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>CompanyOrganization</h1>
+            <div class="buttonsHeader">
+                <div class="darkToggle">
+                    <img class="darkToggleHide darkToggleSun" src="../assets/sunny_FILL0_wght400_GRAD0_opsz48.svg"
+                        alt="Imagem da lua">
+                    <img class="darkToggleMoon" src="../assets/bedtime_FILL0_wght400_GRAD0_opsz48.svg"
+                        alt="Imagem do sol">
+                </div>
+                <ul>
+                    <li class="buttonsGrey"><a href="">Cadastro</a></li>
+                    <li class="buttonsGrey"><a href="../../index.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="registration">
+            <form>
+                <h2>Cadastro</h2>
+                <input class="input" type="text" name="name" id="nameRegistration" placeholder="Seu nome" required>
+                <input class="input" type="email" name="email" id="emailRegistration" placeholder="Seu e-mail" required>
+                <input class="input" type="password" name="password" id="passwordResgistration" placeholder="Sua senha"
+                    required>
+                <input class="input" type="text" name="work" id="workResgistration"
+                    placeholder="Qual o seu nível profissional? Ex: junior, pleno ou sênior" required>
+                <button id="btnResgistration" class="buttonInput" type="submit">Registrar</button>
+            </form>
+            <div>
+                <p>Já possui login?</p>
+                <a class="aDirection" href="../../index.html">Ir para página de login</a>
+            </div>
+        </section>
+        <section class="companiesRegistration">
+            <h2>Empresas Parceiras</h2>
+            <ul class="ulCompany"></ul>
+        </section>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script type="module" src="../js/services/registration.js"></script>
+        <script type="module" src="../js/index.js"></script>
+        <script type="module" src="../js/models/axios.js"></script>
+        <script type="module" src="../js/dashboard.js"></script>
+        <script type="module" src="../js/models/toast.js"></script>
+        <script type="module" src="../js/models/api.js"></script>
+</body>
+
+</html>

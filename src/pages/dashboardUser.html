@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/buttons.css">
+    <link rel="stylesheet" href="../styles/darkMode.css">
+    <link rel="stylesheet" href="../styles/modal.css">
+    <link rel="stylesheet" href="../styles/inputs.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="icon" href="https://kenzie.com.br/favicon.jpeg">
+    <title>CompanyOrganization - Usuário</title>
+</head>
+
+<body class="bodyDashboard">
+    <header>
+        <div class="container">
+            <h1>CompanyOrganization</h1>
+            <div class="buttonsHeader">
+                <div class="darkToggle">
+                    <img class="darkToggleHide darkToggleSun" src="../assets/sunny_FILL0_wght400_GRAD0_opsz48.svg"
+                        alt="Imagem da lua">
+                    <img class="darkToggleMoon" src="../assets/bedtime_FILL0_wght400_GRAD0_opsz48.svg"
+                        alt="Imagem do sol">
+                </div>
+                <ul>
+                    <li class="buttonsGrey"><a id="logout">Sair</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main class="container dashUser">
+        <div id="divHeadUser">
+            <div id="divUser"></div>
+            <div id="editUserDiv">
+                <h2>Atualizar informações</h2>
+                <form id="editUser">
+                    <input class="input" type="text" name="editNameUser" placeholder="Digite seu nome" id="editNameUser"
+                        required>
+                    <input class="input" type="text" name="editEmail" placeholder="Digite seu novo email" id="editEmail"
+                        required>
+                    <input class="input" type="password" name="editPassword" id="editPassword"
+                        placeholder="Digite sua nova senha" required>
+                    <button type="submit" class="buttonInput" id="buttonEditUser">Enviar</button>
+                </form>
+            </div>
+        </div>
+        <div id="listUserPage">
+            <h2>Departamentos</h2>
+            <section id="userPage" class="companiesDashbord">
+                <h2>Usuários do mesmo departamento</h2>
+                <ul class="ulUserDepartment"></ul>
+            </section>
+            <section id="page" class="companiesDashbord">
+                <h2>Departamentos da sua empresa</h2>
+                <ul class="ulUserPage"></ul>
+            </section>
+        </div>
+    </main>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="../js/services/dashboard.js"></script>
+    <script type="module" src="../js/services/logout.js"></script>
+    <script type="module" src="../js/dashboard.js"></script>
+    <script type="module" src="../js/services/dashboardUser.js"></script>
+    <script type="module" src="../js/models/toast.js"></script>
+    <script type="module" src="../js/models/api.js"></script>
+</body>
+
+</html>

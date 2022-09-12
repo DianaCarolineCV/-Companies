@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "axios": "^0.27.2",
+    "swiper": "^8.3.2",
+    "toastify-js": "^1.12.0"
+  }
+}

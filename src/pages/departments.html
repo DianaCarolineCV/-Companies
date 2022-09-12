@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/buttons.css">
+    <link rel="stylesheet" href="../styles/darkMode.css">
+    <link rel="stylesheet" href="../styles/inputs.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="icon" href="https://kenzie.com.br/favicon.jpeg">
+    <title>CompanyOrganization - Administrador</title>
+</head>
+
+<body class="bodyDashboard">
+    <header>
+        <div class="container">
+            <h1>CompanyOrganization</h1>
+            <div class="buttonsHeader">
+                <div class="darkToggle">
+                    <img class="darkToggleHide darkToggleSun" src="../assets/sunny_FILL0_wght400_GRAD0_opsz48.svg"
+                        alt="Imagem da lua">
+                    <img class="darkToggleMoon" src="../assets/bedtime_FILL0_wght400_GRAD0_opsz48.svg"
+                        alt="Imagem do sol">
+                </div>
+                <ul>
+                    <li class="buttonsGrey"><a href="./dashboardAdmin.html">Setores/Usuários</a></li>
+                    <li class="buttonsGrey"><a href="./company.html">Empresas</a></li>
+                    <li class="buttonsGrey"><a href="">Departamentos</a>
+                    </li>
+                    <li class="buttonsGrey"><a id="logout">Sair</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="mainCompany container">
+        <div>
+            <div class="create">
+                <h2>Cadastrar Departamentos</h2>
+                <form>
+                    <input class="input" type="text" name="nameDerpatments" placeholder="Digite o nome do departamento"
+                        required id="nameDerpatments">
+                    <input class="input" type="text" name="descriptionDepartments" id="descriptionDepartments"
+                        placeholder="Digite a descrição do departamento" required>
+                    <select class="input" name="sector" id="sectorDepartments">
+                        <option value="">Escolha a empresa</option>
+                    </select>
+                    <button type="submit" class="buttonInput" id="buttonDepartments">Cadastrar</button>
+                </form>
+            </div>
+            <div class="edit">
+                <h2>Editar Departamentos</h2>
+                <form>
+                    <select class="input" name="sectorEdit" id="sectorDepartmentsEdit">
+                        <option value="">Escolha o departamento</option>
+                    </select>
+                    <input class="input" type="text" name="nameDerpatmentsEdit" placeholder="Nome do departamento"
+                        required id="nameDerpatmentsEdit">
+                    <input class="input" type="text" name="descriptionDepartmentsEdit" id="descriptionDepartmentsEdit"
+                        placeholder="Edite a descrição do departamento" required>
+                    <button type="submit" class="buttonInput" id="buttonDepartmentsEdit">Editar</button>
+                </form>
+            </div>
+
+            <div class="delete">
+                <h2>Deletar Departamentos</h2>
+                <form>
+                    <select class="input" name="sectorEdit" id="deleteDepartments">
+                        <option value="">Escolha o Departamento</option>
+                    </select>
+                    <input class="input" type="text" name="nameDerpatmentsDelete" placeholder="Nome do departamento"
+                        id="nameDerpatmentsDelete" disabled>
+                    <input class="input" type="text" name="descriptionDepartmentsDelete"
+                        id="descriptionDepartmentsDelete" placeholder="Descrição do departamento" disabled>
+                    <button type="submit" class="buttonInput" id="buttonDepartmentsDelete">Deletar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="module" src="../js/services/departments.js"></script>
+    <script type="module" src="../js/services/logout.js"></script>
+    <script type="module" src="../js/dashboard.js"></script>
+    <script type="module" src="../js/models/toast.js"></script>
+    <script type="module" src="../js/models/api.js"></script>
+</body>
+
+</html>

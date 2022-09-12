@@ -1,0 +1,868 @@
+body {
+    height: 100vh;
+    background-color: var(--color-white);
+}
+
+body::-webkit-scrollbar {
+    width: 0.75rem;
+    border: var(--color-grey-2) solid 0.063rem;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--purple);
+    border-radius: 0.375rem;
+}
+
+header {
+    background-color: var(--color-brand-2);
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+}
+
+header>div {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    justify-content: space-between;
+    padding-right: 0.65rem;
+}
+
+header>div>h1 {
+    color: var(--color-grey-5);
+    font-size: var(--font-size-4);
+    font-weight: var(--font-weight-1);
+    line-height: var(--line-height-1);
+}
+
+.buttonsHeader {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.buttonsHeader>ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+
+}
+
+.buttonsHeader>ul>li>a {
+    font-size: var(--font-sixe-4);
+    line-height: var(--line-height-1);
+    color: var(--color-grey-5);
+}
+
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+
+}
+
+section {
+    margin-top: 4rem;
+    width: 100%;
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem;
+
+}
+
+.login {
+    height: 38rem;
+    border: 0.25rem solid var(--color-white);
+    border-radius: 2rem 0 0 2rem;
+
+}
+
+.registration {
+    height: 38rem;
+    border: 0.25rem solid var(--color-white);
+    border-radius: 2rem 0 0 2rem;
+}
+
+.companiesRegistration {
+    border: 0.25rem solid var(--color-white);
+    border-radius: 0 2rem 2rem 0;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    align-items: center;
+}
+
+.companies {
+    border: 0.25rem solid var(--color-white);
+    border-radius: 0 2rem 2rem 0;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    align-items: center;
+}
+
+.companies>h2 {
+    color: var(--color-grey-1);
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-1);
+    line-height: var(--line-height-1);
+}
+
+.ulCompany {
+    display: flex;
+    flex-direction: column;
+    height: 75%;
+    width: 100%;
+    justify-content: center;
+    gap: 0.85rem;
+}
+
+.ulCompany>li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    width: 100%;
+    border-radius: 5%;
+
+}
+
+.ulCompany>li>h3 {
+    color: var(--color-grey-2);
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-2);
+    line-height: var(--line-height-2);
+}
+
+.ulCompany>li>span {
+    color: var(--color-grey-2);
+    font-size: var(--font-size-4);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 90%;
+    height: 100%;
+    background-color: var(--color-white);
+}
+
+form>input {
+    background-color: var(--color-white);
+
+}
+
+section>form>h2 {
+    color: var(--color-grey-1);
+    font-size: var(--font-size-1);
+    font-weight: var(--font-weight-1);
+    line-height: var(--line-height-1);
+    text-align: center;
+}
+
+section>div {
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+section>div>p {
+    font-size: var(--font-size-4);
+    margin-bottom: 0.35rem;
+}
+
+section>div>a {
+    font-size: var(--font-size-4);
+    color: var(--color-grey-1);
+    margin-bottom: 0.25rem;
+}
+
+section>div>a:hover {
+    color: var(--color-brand-2);
+}
+
+.registration>form {
+    margin-top: 5rem;
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 13rem 2rem;
+    background-color: var(--color-white);
+
+}
+
+.dashboard>#divHead {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+    gap: 2rem;
+}
+
+.dashboard>div>h2 {
+    color: var(--color-grey-2);
+    font-size: var(--font-size-1);
+    font-weight: var(--font-weight-1);
+    line-height: var(--line-height-1);
+
+}
+
+.dashboard>#divMain {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.dashboard>#divMain>#users {
+    display: flex;
+    flex-direction: column;
+}
+
+.companiesDashbord>.ulUser>li>.swiper>.swiper-wrapper>.swiper-slide>h3,
+.companiesDashbord>.ulUserNoDepartment>li>.swiper>.swiper-wrapper>.swiper-slide>h3 {
+    color: var(--color-brand-1);
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-1);
+    line-height: var(--line-height-1);
+    margin-bottom: 0.35rem;
+
+}
+
+
+
+.companiesDashbord>.ulUser>li>.swiper>.swiper-wrapper>.swiper-slide>h4,
+.companiesDashbord>.ulUserNoDepartment>li>.swiper>.swiper-wrapper>.swiper-slide>h4 {
+    color: var(--color-brand-2);
+    font-size: var(--font-size-3);
+    margin-bottom: 0.35rem;
+
+}
+
+.companiesDashbord>.ulUser>li>.swiper>.swiper-wrapper>.swiper-slide>p,
+.companiesDashbord>.ulUserNoDepartment>li>.swiper>.swiper-wrapper>.swiper-slide>p {
+    color: var(--color-brand-4);
+    font-size: var(--font-size-4);
+}
+
+#users {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#users>section>h2 {
+    color: var(--color-grey-2);
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-2);
+    line-height: var(--line-height-1);
+}
+
+#divMain {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 4rem;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#divmain>#users {
+    width: 100%;
+}
+
+
+#usersOrganization {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.edit,
+.create,
+.delete {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    height: 25rem;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+#edit>,
+#create>,
+#delete> {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    height: 25rem;
+    width: 100%;
+
+}
+
+#edit>h2,
+#create>h2,
+#delete>h2 {
+    padding-bottom: 3rem;
+    color: var(--color-grey-2);
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-2);
+    line-height: var(--line-height-1);
+}
+
+#edit>form,
+#create>form,
+#delete>form {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+
+#edit>form>select,
+#create>form>select,
+#delete>form>select {
+    background-color: var(--color-white);
+    border: 2px solid var(--color-grey-5);
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+
+#sectors {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40%;
+    width: 100%;
+}
+
+#sectors>li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-brand-1);
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-1);
+    line-height: var(--line-height-1);
+    gap: 1rem;
+}
+
+.bodyDashboard {
+    background-color: var(--color-white);
+
+}
+
+
+.mainCompany {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 13rem;
+}
+
+.mainCompany>div {
+    width: 100%;
+    height: 100%;
+
+}
+
+.mainCompany>.search {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.95rem;
+    height: 25rem;
+    width: 100%;
+
+}
+
+.mainCompany>.search>h1 {
+    padding-top: 1.45rem;
+    width: 60%;
+    text-align: center;
+    color: var(--color-brand-1);
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-1);
+    line-height: var(--line-height-1);
+}
+
+
+.mainCompany>.search>form {
+    padding: 1rem;
+    padding: 1rem;
+    width: 100%;
+    margin-bottom: 2.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.mainCompany>.search>form>button {
+    width: 45%;
+}
+
+.mainCompany>div>.createCompany {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    height: 25rem;
+    width: 100%;
+}
+
+
+.mainCompany>div>.createCompany>form,
+.edit>form,
+.create>form,
+.delete>form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.mainCompany>div>.createCompany>form>select,
+.edit>form>select,
+.create>form>select,
+.delete>form>select {
+    background-color: var(--color-white);
+    border: 2px solid var(--color-grey-5);
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+
+.companiesDashbord {
+    width: 60%;
+    margin-top: 0;
+    gap: 1rem;
+    padding: 1rem;
+
+}
+
+#ulDashbord {
+    display: flex;
+    height: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#ulDashbord>li {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+#ulDashbord>li>h3 {
+    color: var(--color-brand-1);
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-1);
+    line-height: var(--line-height-1);
+}
+
+#ulDashbord>li>.swiper>.swiper-wrapper>.swiper-slide>h4 {
+    color: var(--color-brand-2);
+    font-size: var(--font-size-3);
+    margin-bottom: 0.35rem;
+
+}
+
+#ulDashbord>li>.swiper>.swiper-wrapper>.swiper-slide>p {
+    color: var(--color-brand-4);
+    font-size: var(--font-size-4);
+}
+
+.swiper {
+    width: 24rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 5rem;
+    min-height: 10rem;
+    box-shadow: 0.125rem 0.125rem 0.25rem var(--color-black);
+}
+
+.swiper-slide {
+    min-width: 100%;
+    position: absolute;
+}
+
+.swiper-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 4rem;
+}
+
+.swiper-button-next>img,
+.swiper-button-prev>img {
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+}
+
+.bodyDashboard {
+    background-color: var(--color-white);
+}
+
+.bodyDashboard>.dashUser {
+    width: 100%;
+    height: 100%;
+}
+
+.dashUser {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30rem;
+}
+
+.bodyDashboard>.dashUser>#divUser {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#divUser {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+#divUser>h2 {
+    padding-bottom: 2.25rem;
+}
+
+#divUser>h3 {
+    color: var(--color-brand-1);
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-1);
+    line-height: var(--line-height-1);
+    padding-bottom: 0.25rem;
+
+}
+
+#divUser>p {
+    color: var(--color-brand-4);
+    font-size: var(--font-size-4);
+}
+
+#divHeadUser {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+#editUserDiv>h2 {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+#editUserDiv>form {
+    margin-top: 0.25rem;
+    width: 100%;
+}
+
+#listUserPage {
+    margin-top: 8rem;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+#userPage,
+#page {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-bottom: 1rem;
+
+}
+
+.ulUserDepartment>li>h3,
+.ulUserPage>li>h3 {
+    color: var(--color-brand-1);
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-1);
+    line-height: var(--line-height-1);
+}
+
+.ulUserDepartment>li>.swiper>.swiper-wrapper>.swiper-slide>h4,
+.ulUserPage>li>.swiper>.swiper-wrapper>.swiper-slide>h4 {
+    color: var(--color-brand-2);
+    font-size: var(--font-size-3);
+    margin-bottom: 0.35rem;
+
+}
+
+.ulUserDepartment>li>.swiper>.swiper-wrapper>.swiper-slide>p,
+.ulUserPage>li>.swiper>.swiper-wrapper>.swiper-slide>p {
+    color: var(--color-brand-4);
+    font-size: var(--font-size-4);
+}
+
+@media (min-width: 480px) {
+
+    header>div {
+        padding: 1.25rem;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .ulCompany {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+
+    .ulCompany>li {
+        width: 40%;
+        border-radius: 50%;
+        padding: 0.45rem
+    }
+
+    .buttonsHeader {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 3rem;
+    }
+}
+
+
+@media (min-width: 768px) {
+
+    main {
+        display: flex;
+        flex-direction: row;
+    }
+
+    body {
+        background-color: var(--color-grey-5);
+    }
+
+    section {
+        width: 40%;
+    }
+
+    header {
+        height: 4.75rem;
+    }
+
+    form {
+        margin-top: 0;
+    }
+
+    .buttonsHeader>ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .login {
+        border: 0.25rem solid var(--color-white);
+        border-radius: 2rem 0 0 2rem;
+
+    }
+
+    .companies {
+        border: 0.25rem solid var(--color-white);
+        border-radius: 0 2rem 2rem 0;
+        height: 38rem;
+
+    }
+
+    .companiesRegistration {
+        height: 38rem;
+    }
+
+    .companies>h2 {
+        font-size: var(--font-size-1);
+
+    }
+
+    header>div>h1 {
+        font-size: var(--font-size-1);
+
+    }
+
+    .ulCompany {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+
+    .ulCompany>li {
+        width: 40%;
+        border-radius: 50%;
+        padding: 0.45rem
+    }
+
+    .buttonsHeader {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .buttonsHeader>ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+
+    header>div {
+        padding: 1.25rem;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header>div>h1 {
+        color: var(--color-grey-5);
+        font-size: var(--font-size-2);
+        font-weight: var(--font-weight-1);
+        line-height: var(--line-height-1);
+    }
+
+    .dashboard {
+        padding: 8rem 2rem;
+    }
+
+    .dashboard>#divMain {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #divmain>#users {
+        width: 60%;
+    }
+
+
+    #usersOrganization {
+        width: 35%;
+    }
+
+    #sectors {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .swiper {
+        width: 26rem;
+        padding: 1rem;
+
+    }
+
+
+    .mainCompany {
+        padding-top: 8rem;
+    }
+
+    .mainCompany>div {
+        display: flex;
+
+    }
+
+    .mainCompany>.search>form {
+        width: 38%;
+
+    }
+
+    .mainCompany>.search>form>button {
+        width: 20%;
+    }
+
+    #divmain>#users {
+        width: 60%;
+    }
+
+
+    .mainCompany>.search>form {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .mainCompany>.search {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .edit,
+    .create,
+    .delete {
+        width: 33%;
+    }
+
+    .mainCompany>div>.createCompany {
+        width: 40%;
+    }
+
+    #divHeadUser {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #listUserPage {
+        margin-top: 0.25rem;
+    }
+
+    .dashUser {
+        padding-top: 13rem;
+    }
+
+    #editUserDiv>h2 {
+        padding-top: 0;
+        padding-bottom: 1rem;
+    }
+}
